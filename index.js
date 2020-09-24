@@ -129,9 +129,7 @@ function startRecursive() {
 
     console.log(users.length);
     if (users.length == 0) {
-        return new Promise((resolve, reject)=>{
-            resolve(0);
-        })
+        return Promise.resolve(0);
     } else {
         let parallelTasks = [];
         for (let i = 0; i < 10; i++) {
